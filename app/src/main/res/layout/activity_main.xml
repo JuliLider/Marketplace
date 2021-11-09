@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -29,6 +30,66 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+=======
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<!--    Imagen de Inicio-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/login"
+            android:layout_margin="25dp"/>
+
+    </LinearLayout>
+
+<!--    Botones de Inicio-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_login"
+            android:textSize="25sp"/>
+
+        <Button
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="To Register"
+            android:textSize="25sp"/>
+
+        <Button
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textSize="25sp"/>
+
+
+    </LinearLayout>
+
+<!--    footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ideapps 2021®"
+            android:gravity="center" />
+>>>>>>> f53d9ee (Initial commit)
 
     </LinearLayout>
 
