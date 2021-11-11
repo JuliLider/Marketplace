@@ -11,8 +11,6 @@
 
 
 <!--    Imagen de Inicio-->
-
-    <!--    Botones de Inicio-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -22,11 +20,12 @@
         <ImageView
             android:layout_width="200dp"
             android:layout_height="300dp"
-            android:layout_marginTop="90dp"
-            android:src="@drawable/principal" />
+            android:src="@drawable/principal"
+            android:layout_marginTop="90dp"/>
 
     </LinearLayout>
 
+<!--    Botones de Inicio-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -40,8 +39,6 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="login"
-            android:textColor="@color/brawn_200"
-            android:background="@color/beige"
             android:textSize="25sp"/>
 
         <Button
@@ -50,8 +47,6 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="To Register"
-            android:textColor="@color/brawn_200"
-            android:background="@color/beige_500"
             android:layout_marginTop="10dp"
             android:textSize="25sp"/>
 
@@ -61,8 +56,6 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="About Us"
-            android:textColor="@color/brawn_200"
-            android:background="@color/clear_700"
             android:layout_marginTop="10dp"
             android:textSize="25sp"/>
 
@@ -79,9 +72,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ideapps 2021 ®"
-            android:textStyle="bold"
-            android:textColor="@color/brawn_200"
+            android:text="Ideapps 2021®"
             android:gravity="center" />
 
     </LinearLayout>
