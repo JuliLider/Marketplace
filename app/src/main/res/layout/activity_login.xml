@@ -8,6 +8,7 @@
     tools:context=".LoginActivity"
     android:orientation="vertical">
 
+<!--    image-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -15,6 +16,7 @@
 
     </LinearLayout>
 
+<!--    Login-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -48,12 +50,15 @@
             android:text="Get in"/>
 
         <Button
+            android:id="@+id/btn_return"
+            android:onClick="onReturn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="to return"/>
 
     </LinearLayout>
 
+<!--    footer-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

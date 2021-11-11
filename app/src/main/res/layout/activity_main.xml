@@ -32,18 +32,24 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/btn_login"
+            android:onClick="onLogin"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="login"
             android:textSize="25sp"/>
 
         <Button
+            android:id="@+id/btn_register"
+            android:onClick="onRegister"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="To Register"
             android:textSize="25sp"/>
 
         <Button
+            android:id="@+id/btn_about"
+            android:onClick="onAbout"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="About Us"
