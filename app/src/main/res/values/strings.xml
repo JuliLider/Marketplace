@@ -3,4 +3,5 @@
     <string name="action_search">search</string>
     <string name="action_settings">settings</string>
     <string name="action_logout">logout</string>
+    <string name="txt_ideapps">Ideapps 2021®</string>
 </resources>

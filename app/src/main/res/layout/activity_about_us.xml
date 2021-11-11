@@ -54,7 +54,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ideapps 2021®"
+            android:text="@string/txt_ideapps"
             android:gravity="center" />
 
     </LinearLayout>
