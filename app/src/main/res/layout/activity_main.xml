@@ -16,21 +16,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="6"
         android:gravity="center">
 
         <ImageView
             android:layout_width="200dp"
             android:layout_height="300dp"
             android:layout_marginTop="90dp"
-            android:src="@drawable/principal" />
+            android:src="@drawable/marketone" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:orientation="vertical"
         android:gravity="center">
 
