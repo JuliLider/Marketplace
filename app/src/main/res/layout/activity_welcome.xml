@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity"
     android:orientation="vertical"
-    android:background="@drawable/welcome">
+    android:background="@drawable/welcomefull">
 
     <LinearLayout
         android:layout_width="match_parent"

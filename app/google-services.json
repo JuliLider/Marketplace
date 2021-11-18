@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "588141266695",
+    "project_id": "market-place-ideapps",
+    "storage_bucket": "market-place-ideapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588141266695:android:ff0f53ff6c6710b76c27a2",
+        "android_client_info": {
+          "package_name": "com.example.marketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588141266695-66qej2sh3rdcumhrinnbqrvcerfaljqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marketplace",
+            "certificate_hash": "270a1830da2b4c119bb9bb4d474b11d032489e4d"
+          }
+        },
+        {
+          "client_id": "588141266695-ml7mlavd5v51iaa48k4a87vu686fiag7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABql0xANoizjwRVLdb8QPic9nIy08ZH_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588141266695-ml7mlavd5v51iaa48k4a87vu686fiag7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

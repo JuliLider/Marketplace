@@ -89,14 +89,14 @@ class LoginActivity : AppCompatActivity() {
 
 
     fun onGetIn(view: android.view.View) {
-        var user: String = edt_username!!.text.toString()
+        var username: String = edt_username!!.text.toString()
         var password: String = edt_password!!.text.toString()
 
-        if (user.isNotEmpty() && password.isNotEmpty()) {
-            FirebaseAuth.getInstance().signInWithEmailAndPassword(user, password)
+        if (username.isNotEmpty() && password.isNotEmpty()) {
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(username, password)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        showHome(user, ProviderType.BASIC)
+                        showHome(username, ProviderType.BASIC)
                     } else {
                         getToast(resources.getString(R.string.test_errorAuth));
                     }
