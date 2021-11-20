@@ -77,7 +77,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <Button
+        <!--<Button
             android:id="@+id/sigUpButton"
             android:onClick="onRegistrar"
             android:layout_width="150dp"
@@ -86,7 +86,7 @@
             android:background="@android:color/transparent"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/brawn_200"/>
+            android:textColor="@color/brawn_200"/>-->
 
         <Button
             android:id="@+id/btn_getIn"

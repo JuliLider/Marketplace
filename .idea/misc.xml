@@ -24,7 +24,7 @@
         <entry key="app/src/main/res/layout-sw720dp-land/activity_main.xml" value="0.103515625" />
         <entry key="app/src/main/res/layout-sw720dp/activity_main.xml" value="0.150390625" />
         <entry key="app/src/main/res/layout/activity_about_us.xml" value="0.20052083333333334" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.20052083333333334" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_prueba.xml" value="0.14537037037037037" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.335" />
