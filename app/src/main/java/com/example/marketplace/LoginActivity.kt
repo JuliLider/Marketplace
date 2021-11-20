@@ -29,8 +29,8 @@ class LoginActivity : AppCompatActivity() {
 
         edt_username = findViewById(R.id.edt_username)
         edt_password = findViewById(R.id.edt_password)
-        // Obtain the FirebaseAnalytics instance.
-        title = resources.getString(R.string.test_login)
+        //Obtain the FirebaseAnalytics instance.
+        title = resources.getString(R.string.text_login)
 
         session()
 
@@ -67,17 +67,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun showHome(username: String, provider: ProviderType) {
 
-        val homeIntent = Intent(this, WelcomeActivity::class.java).apply {
-            putExtra("email", username)
-            putExtra("provider", provider.toString())
-        }
-
-        startActivity(homeIntent)
-
-        getToast(resources.getString(R.string.test_welcome));
-    }
 
     private fun getToast(message: String) {
         Toast.makeText(
@@ -98,13 +88,25 @@ class LoginActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         showHome(username, ProviderType.BASIC)
                     } else {
-                        getToast(resources.getString(R.string.test_errorAuth));
+                        getToast(resources.getString(R.string.text_errorAuth));
                     }
                 }
 
         } else {
-            getToast(resources.getString(R.string.test_errorlogin));
+            getToast(resources.getString(R.string.text_errorlogin));
         }
+    }
+
+    private fun showHome(username: String, provider: ProviderType) {
+
+        val homeIntent = Intent(this, WelcomeActivity::class.java).apply {
+            putExtra("email", username)
+            putExtra("provider", provider.toString())
+        }
+
+        startActivity(homeIntent)
+
+        getToast(resources.getString(R.string.text_welcome));
     }
 
         fun onReturn(view: android.view.View) {
@@ -115,7 +117,7 @@ class LoginActivity : AppCompatActivity() {
         fun onRegistrar(view: android.view.View) {
             val registrarIntent = Intent(this, RegisterActivity::class.java)
             startActivity(registrarIntent)
-            getToast(resources.getString(R.string.test_register));
+            getToast(resources.getString(R.string.text_register));
         }
 
 
