@@ -3,6 +3,7 @@ package com.example.marketplace
 import android.content.Context
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -13,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.example.marketplace.databinding.ActivityWelcomeBinding
 //import com.example.marketplace.databinding.ActivityHomeBinding
 import com.facebook.login.LoginManager
@@ -26,33 +28,31 @@ enum class  ProviderType{
 
 class WelcomeActivity : AppCompatActivity() {
 
-    /*private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityWelcomeBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_welcome)
 
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_welcome)
 
         setSupportActionBar(findViewById(R.id.my_toolbar))
 
-        binding.myToolbar.fab.setOnClickListener { view ->
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
 
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-    }
+        }
 
-        val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-            ), drawerLayout
-        )
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view_tag) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home,R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
@@ -80,10 +80,11 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view_tag) as NavHostFragment
+        val navController = navHostFragment.navController
 
+        return navController.navigateUp(appBarConfiguration)  || super.onSupportNavigateUp()
+    }
 
     fun onSignoff(view: android.view.View) {
 
@@ -99,6 +100,6 @@ class WelcomeActivity : AppCompatActivity() {
 
         FirebaseAuth.getInstance().signOut()
         onBackPressed()
-    }*/
+    }
 
-}
+    }

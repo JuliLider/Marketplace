@@ -20,8 +20,8 @@ import java.util.ArrayList
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
-    //private lateinit var _binding: FragmentHomeBinding? = null//
+   /* private lateinit var homeViewModel: HomeViewModel
+    private lateinit var _binding: FragmentHomeBinding?*/
 
     private lateinit var listRecyclerView: RecyclerView
     private lateinit var myAdapter: RecyclerView.Adapter<ProductAdapter.ProductViewHolder>
@@ -31,8 +31,8 @@ class HomeFragment : Fragment() {
     }
 
     // This property is only valid between onCreateView and
-    // onDestroyView.
-    //private val binding get() = _binding!!//
+    //onDestroyView.
+   // private val binding get() = _binding!!//
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,8 +47,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.
-        textHome
+        val textView: TextView = binding.text
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })*/
