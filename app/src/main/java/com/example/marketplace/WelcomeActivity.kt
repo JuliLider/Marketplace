@@ -3,6 +3,7 @@ package com.example.marketplace
 import android.content.Context
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -13,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.example.marketplace.databinding.ActivityWelcomeBinding
 //import com.example.marketplace.databinding.ActivityHomeBinding
 import com.facebook.login.LoginManager
@@ -31,20 +33,39 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_welcome)
 
         setSupportActionBar(findViewById(R.id.my_toolbar))
 
-        /*binding.myToolbar.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()*/
-    }
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
 
-        /*val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
+        }
+
+        //val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)//
+        val navView: NavigationView = findViewById(R.id.nav_gallery)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        //appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home,R.id.nav_slideshow), drawerLayout)//
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        navView.setupWithNavController(navController)
+
+
+        /*binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_welcome)
+
+
+
+        binding.myToolbar.fab.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+
+
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -52,11 +73,10 @@ class WelcomeActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
             ), drawerLayout
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+
 
         //setup Login
-        title=resources.getString(R.string.test_Home)
+        title=resources.getString(R.string.text_Home)
         val bundle =intent.extras
         val email=bundle?.getString("email")
         val provider=bundle?.getString("provider")
@@ -74,7 +94,7 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.home, menu)
+        menuInflater.inflate(R.menu.menu_welcome_activity, menu)
         return true
     }
 
