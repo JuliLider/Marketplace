@@ -19,9 +19,9 @@ val info: Bundle): RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     private var context: AppCompatActivity=context
 
-    var productTitle: ArrayList<String> = info.getStringArrayList("productos") as ArrayList<String>
-    var productTimes: ArrayList<String> = info.getStringArrayList("precios") as ArrayList<String>
-    var productPlaces: ArrayList<String> = info.getStringArrayList("categorias") as ArrayList<String>
+    var productTitle: ArrayList<String> = info.getStringArrayList("producto") as ArrayList<String>
+    var productTimes: ArrayList<String> = info.getStringArrayList("precio") as ArrayList<String>
+    var productPlaces: ArrayList<String> = info.getStringArrayList("categoria") as ArrayList<String>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val layout = LayoutInflater.from(parent.context).inflate(R.layout.item_product, parent,  false)
@@ -40,9 +40,9 @@ val info: Bundle): RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
         holder.layout.setOnClickListener{
             Toast.makeText(holder.itemView.context, textViewTask.text, Toast.LENGTH_LONG).show()
             val datos = Bundle ()
-            datos.putString("tarea", textViewTask.text as String)
-            datos.putString("hora", textViewTime.text as String)
-            datos.putString("lugar", productPlaces [position])
+            datos.putString("producto", textViewTask.text as String)
+            datos.putString("precio", textViewTime.text as String)
+            datos.putString("categoria", productPlaces [position])
 
             context.getSupportFragmentManager ()?.beginTransaction()
                 ?.setReorderingAllowed (true)

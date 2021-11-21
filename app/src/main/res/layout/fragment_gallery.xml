@@ -14,12 +14,12 @@
         android:src="@mipmap/ic_launcher_round"/>
 
     <TextView
-        android:id="@+id/textViewTask"
+        android:id="@+id/textViewProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:textSize="20sp"
-        android:text="Productos"
+        android:text="Producto"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -30,12 +30,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewTime"
+        android:id="@+id/textViewPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:textSize="20sp"
-        android:text="Precios"
+        android:text="Precio"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -46,12 +46,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/productPlaces"
+        android:id="@+id/textViewCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:textSize="20sp"
-        android:text="Categorias"
+        android:text="Categoria"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"

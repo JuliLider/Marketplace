@@ -8,38 +8,37 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.marketplace.R
 import com.example.marketplace.databinding.FragmentGalleryBinding
 
 
 class GalleryFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        //Inflate the layout for this fragment
+        val fragmento = inflater.inflate(R.layout.fragment_gallery, container, false)
 
-        val textView: TextView = binding.textViewTask
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
-    }
+        var producto = requireArguments().getString("producto")
+        var precio = requireArguments().getString("precio")
+        var categoria = requireArguments().getString("categoria")
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        var textViewProducto: TextView = fragmento.findViewById(R.id.textViewProduct)
+        var textViewPrecio: TextView = fragmento.findViewById(R.id.textViewPrice)
+        var textViewCategoria: TextView = fragmento.findViewById(R.id.textViewCategory)
+
+        textViewProducto.text = producto
+        textViewPrecio.text = precio
+        textViewCategoria.text = categoria
+
+        return fragmento
     }
 }

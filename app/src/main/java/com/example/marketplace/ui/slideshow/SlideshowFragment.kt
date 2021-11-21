@@ -14,6 +14,10 @@ import com.example.marketplace.databinding.FragmentSlideshowBinding
 
 class SlideshowFragment : Fragment() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     private lateinit var slideshowViewModel: SlideshowViewModel
     private var _binding: FragmentSlideshowBinding? = null
 
