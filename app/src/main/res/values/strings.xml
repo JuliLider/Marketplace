@@ -45,6 +45,9 @@
     <string name="text_TermsMessage">Accept all policies, security and terms when registering.</string>
     <string name="text_ok">Accept</string>
     <string name="text_cancel">Cancel</string>
+    <string name="text_tarea_1">Camiseta</string>
+    <string name="text_tarea_2">Jeans</string>
+    <string name="text_tarea_3">Zapatos</string>
 
     <string name="preds_file" translatable="false">com.example.marketplace.PREFERECE_FILE_KEY</string>
     <string name="default_web_client_id2" translatable="false">1017434080370-slqfef8v4jf8i7ks6dd1gp1ibhsp3ac3.apps.googleusercontent.com</string>
